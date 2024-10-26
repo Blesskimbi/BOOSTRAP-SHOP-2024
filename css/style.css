@@ -4,28 +4,33 @@
   box-sizing: border-box;
 }
 body{
-  background-color: red;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 .navbar-brand{
-  font-size: 3rem;
-  color: rgb(63, 87, 160);
+  font-size: 2rem;
+  color: #3f57a0;
   font-family: "Pacifico", cursive;
   font-weight: 400;
 }
 .navbar-brand:hover{
-  color: black;
+  color: #1f4c7c;
 }
-.nav-link{
-  color: rgb(63, 87, 160);
+.navbar-light .navbar-nav .nav-link{
+  color: #3f57a0;
+  font-weight: 500;
   margin: 0 10px;
-  font-family: 'Roboto', sans-serif;
+  transition: color 0.3s ease;
 }
-.navbar-nav li a{
-  color: rgb(63, 87, 160);
-  font-weight: bold;
-}
-.navbar-nav li a:hover{
-  color: rgb(63, 87, 160);
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active{
+  color: #1f4c7c;
 }
 .btn1{
   height: 45px;
@@ -45,20 +50,20 @@ body{
 /*=====navbar end===*/
 
 .main{
-  background: url(/img/main\ copy.jpg)no-repeat;
+  background: url(/img/main\ copy.jpg) no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .main h1{
-  font-size: 5rem;
+  font-size: 3.5rem;
   font-weight: 900;
   color: #1f4c7c;
-  margin: 0;
 }
-.main h3,h4,h5,h6{
-  font-size: 3rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
+.main h3{
+  font-size: 2rem;
+  font-weight: 700;
 }
 p{
   font-family: 'Roboto', sans-serif;
@@ -123,7 +128,47 @@ p{
 }
 .card{
   border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.btn-outline-primary {
+  align-self: flex-start;
+}
+
 .center{
   -webkit-box-shadow: 10px -5px 18px -12px rgba(10,9,10,1);
 -moz-box-shadow: 10px -5px 18px -12px rgba(10,9,10,1);
@@ -181,4 +226,13 @@ box-shadow: 10px -5px 18px -12px rgba(10,9,10,1);
 .branding h1{
   font-weight: 900;
   font-family: 'Anton', sans-serif;
+}
+
+/* Solution Section Styles */
+.solution .row {
+  margin-bottom: -30px;
+}
+
+.solution .col-lg-4 {
+  margin-bottom: 30px;
 }
